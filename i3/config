@@ -3,14 +3,13 @@ set $bs bindsym
 set $wsp workspace
 set $cn container
 set $nm number
-exec --no-startup-id feh --bg-scale /home/rubysamurai306/wallpapers/chernobyl.png
+# CHANGE PATH FOR INDIVIDUAL COMPUTER, example /home/$USER/wallpapers/cat.png
+exec --no-startup-id feh --bg-scale 
 for_window [class="^.*"] border pixel 0
 gaps inner 5
 smart_gaps on
-exec /home/rubysamurai306/Downloads/rah.sh
 font pango:monospace 9
 exec --no-startup-id xscreensaver
-#exec --no-startup-id picom
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
@@ -21,10 +20,10 @@ $bs XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 $bs XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 floating_modifier $mod
 $bs $mod+s exec spotify
-$bs $mod+w exec firefox
-$bs $mod+e exec element-desktop
+$bs $mod+w exec waterfox
+$bs $mod+e exec thunar
 $bs $mod+Shift+d exec discord
-$bs $mod+t exec alacritty
+$bs $mod+t exec st
 $bs $mod+q kill
 $bs $mod+d exec --no-startup-id rofi -show drun
 $bs $mod+Left focus left
