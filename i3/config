@@ -6,10 +6,9 @@ set $nm number
 # CHANGE PATH FOR INDIVIDUAL COMPUTER, example /home/$USER/wallpapers/cat.png
 exec --no-startup-id feh --bg-scale 
 for_window [class="^.*"] border pixel 0
-gaps inner 5
+gaps inner 4
 smart_gaps on
 font pango:monospace 9
-exec --no-startup-id xscreensaver
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
